@@ -1,0 +1,7 @@
+.container-form {
+    width: 320px;
+    padding-inline: 20px !important;
+    padding-block-start: 15px !important;
+    padding-block-end: 5px !important;
+    border-radius: 10px;
+}
