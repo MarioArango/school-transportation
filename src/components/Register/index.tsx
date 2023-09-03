@@ -17,7 +17,7 @@ type ValuesForm = {
 
 export default function Register() {
 
-    const [ link, setLink ] = useState('https://wa.me/51998525652/?text=')
+    const [ link, setLink ] = useState('https://wa.me/51964911676/?text=')
 
     const [ form ] = Form.useForm()
     const { validateFields } = form
