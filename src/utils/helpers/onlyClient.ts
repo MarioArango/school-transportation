@@ -1,25 +1,7 @@
 'use client'
 
 import { encrypt, decrypt } from './index'
-import { fallbackLng } from '@/i18n/settings';
-import { message } from "antd"
 import platform from 'platform'
-
-type MessagesAntd = 'success' | 'warning' | 'info' | 'error'
-export const showMessage = async (description: string, type: MessagesAntd = 'success', duration = 3) => {
-  try {
-    const currentPath = window?.location?.pathname?.split('/')[1]?? fallbackLng
-
-    const response = await import(`@/i18n/locales/${currentPath}/responses.json`)
-    const msg = response[description??'system.process-successful']
-
-    message[type](msg, duration)
-
-  } catch (error) {
-    // console.log(error)
-  }
-}
-
 
 export const setLocalStorage = <T>(name: string, value: T, isEncrypted: boolean = false) => {
   if(isEncrypted){
